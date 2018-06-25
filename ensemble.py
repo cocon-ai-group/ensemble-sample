@@ -35,6 +35,7 @@ if __name__ == '__main__':
 	print('ensemble 1:')
 	clz = ensemble(train, test, rs=1)
 	report = classification_report(clazz, clz, target_names=['class1','class2','class3'])
+	print(report)
 	# 乱数列を変更しながらアンサンブル学習を繰り返す
 	print('random ensemble:')
 	clazzes = []
