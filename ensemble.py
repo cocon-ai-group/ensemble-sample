@@ -25,7 +25,7 @@ def ensemble(train, test, rs=1):
 	clz2 = np.argmax(lgb_clf.predict(vecs), axis=1)
 	clz3 = xgb_clf.predict(xgb_test)
 	clz4 = np.argmax(cb_clf.predict(vecs_test), axis=1)
-	clz = [get_one([clz1[i],clz2[i],clz3[i]]) for i in range(len(clz1))]
+	clz = [get_one([clz1[i],clz2[i],clz3[i],clz4[i]]) for i in range(len(clz1))]
 	return clz
 
 if __name__ == '__main__':
